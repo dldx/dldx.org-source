@@ -1,0 +1,20 @@
+baseurl = "//dldx.org"
+languageCode = "en-gb"
+title = "Tangled up in data"
+theme = "hpstr"
+pluralizelisttitles = false
+PygmentsCodeFences = true
+Paginate = 5
+disqusShortname = "dldx-org"
+
+[params]
+	subtitle = "Politics. Environment. Data."
+	[params.author]
+		name = "Durand D'souza"
+		avatar = "/images/avatar.jpg"
+		bio = ""
+		github = "dldx"
+	[params.image]
+	  feature = "/images/abstract-1.jpg"
+	  credit = "dargadgetz"
+	  creditlink = "http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/"
