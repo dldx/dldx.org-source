@@ -1,6 +1,11 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: ""
+date: 
 draft: true
+image:
+    feature: 
+    credit: ''
+    creditlink: 
+tags:
+    - misc.
 ---
-

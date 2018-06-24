@@ -1,4 +1,4 @@
-baseurl = "//dldx.org"
+baseurl = "https://dldx.org"
 languageCode = "en-gb"
 title = "Tangled up in data"
 theme = "hpstr"
@@ -6,15 +6,19 @@ pluralizelisttitles = false
 PygmentsCodeFences = true
 Paginate = 5
 disqusShortname = "dldx-org"
-
+Copyright = 'Except where otherwise noted, all content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. You are welcome to reuse my work elsewhere, but please let me know in advance and credit me.'
 [params]
-	subtitle = "Politics. Environment. Data."
+	subtitle = "Taking the world apart, one graph at a time."
 	[params.author]
 		name = "Durand D'souza"
 		avatar = "/images/avatar.jpg"
-		bio = ""
+		bio = "Freelance data journalist based in the UK"
 		github = "dldx"
+		# twitter = "durand101"
+		medium = "dldx"
+		instagram = "durand.dsouza"
+		email = "durand1@gmail.com"
 	[params.image]
-	  feature = "/images/abstract-1.jpg"
-	  credit = "dargadgetz"
-	  creditlink = "http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/"
+	  feature = "/images/header.jpg"
+	  credit = '<i class="fa fa-fw fa-map-marker"></i> Pembroke, Wales'
+	  creditlink = "https://500px.com/photo/34333226/the-sea-cliffs-of-pembroke-by-durand-d-souza?ctx_page=1&from=user&user_id=641708"

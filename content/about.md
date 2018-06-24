@@ -1,11 +1,11 @@
 ---
-title: Durand
+title: "About me"
 comments: false
 weight: -1
 type: page
 reading_time: false
 image:
   feature: https://lh3.googleusercontent.com/DzRSxBhhcC2yvRl6Wf9VA5Zliww3mXtW_bVlE5nqMLe0EvAM9Z_wW_cwwaunCXrf4ttpOPROSDpxXONfdmQvI3twIiK9AEhlhD2dbOXprxoaxgIUWhW6uSa0LO46-gsj_SIk5IH6euld_XRMB4AY_19Dw9tTGBM7x9ePETAlig80YB07hfzv75OAPwPYF0ay8kFGbalS4tTe4a5vyAaYneSLYKMbG4XKZvPBSaDeoxDIRN_-eT9hgqeEF5thNUpWldVKJqmNsZM-cdsrbdcqU_4TdJI77egryXAapLF5PVRK_DSYn2DFpvOJ_uXiax7vFz7TK8VSJynuolthlYWYMxWk8jU2H7UMImpM7LSkaTj9bUz55jqyKVgiLFchW3dX9F6MbW_wAhiaKAI3l75D9I8xRecQ0dXmyqYAlbV72Lxb5tM0tAMXEUnM_UWpX0gYMHk1sezK4pVVbarv1n9nZJNON4JNMfCvsEiKZLCJzl2JuM3ytfIIWBBv6mpWB95sc6F3Dy33serDU6XYGUd0hYscOe3vKwjMRnIYrixEcM1lwGiv8Q6XcV1ZIRSRKgLOSH3z5-6klNZ437YiqzVCwE-_lcHyAMnPypg3-Y_zx13XYxuQ0-2kwGbtJbtQgkEDS0F5oTxFqbQDoZrF5u1ucyCAvm3f0frqwQ=w2441-h1628-no
-  credit: Durand D'souza // CC-by-NC
+  credit: '<i class="fa fa-fw fa-map-marker"></i> Allgäu, Germany'
   creditlink: https://500px.com/photo/175824679/a-bavarian-sunset-by-durand-d-souza?ctx_page=1&from=user&user_id=641708
 ---
