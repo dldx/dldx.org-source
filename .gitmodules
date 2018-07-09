@@ -1,6 +1,3 @@
-[submodule "themes/hpstr"]
-	path = themes/hpstr
-	url = https://github.com/dldx/hpstr-hugo-theme.git
 [submodule "public"]
 	path = public
 	url = git@github.com:dldx/dldx.github.io.git
