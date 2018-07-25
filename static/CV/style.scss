@@ -7,7 +7,7 @@ $cv-width: 900px;
 $tablet-width: $cv-width;
 $phone-width: 500px;
 $primary-background: #FF005D;
-$foreground-color: #f0eee1;
+$foreground-color: #fffdee;
 $heading-color: lighten(#707070, 10);
 $h-padding: 3rem;
 
@@ -69,6 +69,19 @@ a {
 h1 {
   margin: 0.5rem auto;
 }
+
+.download-pdf {
+  text-align: center;
+  padding: 1rem;
+  background-color: $primary-background;
+  color: $foreground-color;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+
+  @media print {
+    display: none;
+  }
+}
+
 .wrapper {
   margin: 3rem auto;
   max-width: $cv-width;
@@ -118,7 +131,7 @@ h1 {
     float: right;
 
     img {
-      border: 5px solid $foreground-color;
+      border: 3px solid $foreground-color;
       margin: auto;
     }
     @include phone {
