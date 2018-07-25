@@ -1,0 +1,273 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+$cv-width: 900px;
+$tablet-width: $cv-width;
+$phone-width: 500px;
+$primary-background: #FF005D;
+$foreground-color: #f0eee1;
+$heading-color: lighten(#707070, 10);
+$h-padding: 3rem;
+
+@mixin tablet {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: #{$phone-width - 1px}) {
+    @content;
+  }
+}
+
+@page { margin: 1cm 0; } /* All margins set to 2cm */
+
+  @page :first {
+    margin: 0;
+    margin-bottom: 0;
+
+   }
+html {
+  font-size: 12px;
+  @include phone {
+    font-size: 14px;
+  }
+}
+
+@media print {
+  * {  box-shadow:none !important; text-shadow: none !important;  }
+
+.wrapper {
+  background-color: unset !important;
+}
+}
+body {
+  font-family: Raleway,serif;
+  margin: 0;
+  background: rgb(240,240,240);
+  font-size: 1.3rem;
+  @media print {
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    background: none;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+}
+
+h1 {
+  margin: 0.5rem auto;
+}
+.wrapper {
+  margin: 3rem auto;
+  max-width: $cv-width;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+  background-color: rgb(250,250,250);
+  @include tablet {
+    margin: auto;
+  }
+}
+
+.header {
+  width: 100%;
+  padding: 2rem $h-padding;
+  background: $primary-background;
+  display: inline-block;
+
+  .text {
+    max-width: 70%;
+    color: $foreground-color;
+    float: left;
+    font-weight: 600;
+    @include phone {
+      float: unset;
+      max-width: unset;
+      text-align: center;
+    }
+
+    h1 {
+      font-weight: 500;
+      font-size: 4rem;
+      margin: 0 auto;
+    }
+
+    h2 {
+      margin: .5rem auto;
+      font-weight: 600;
+      font-size: 2rem;
+    }
+
+    span {
+      margin-left: .2rem;
+      font-size: 1.3rem;
+    }
+  }
+
+  .photo {
+    float: right;
+
+    img {
+      border: 5px solid $foreground-color;
+      margin: auto;
+    }
+    @include phone {
+      width: 100%;
+      margin: 2rem;
+      float: unset;
+      display: inline-block;
+    }
+  }
+}
+
+.bio {
+  color: $foreground-color;
+  padding: 1rem $h-padding;
+  width: 100%;
+  margin: auto;
+  background: darken($primary-background, 6);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+
+  span {
+    flex: 1 1 250px;
+    max-width: 250px;
+    margin: 0.5rem;
+    margin-left: 0;
+    @include phone {
+      flex: 1 1 200px;
+      max-width: 200px;
+    }
+
+    @media print {
+      flex: 1 1 200px;
+      max-width: 200px;
+    }
+  }
+}
+
+.section-heading {
+  padding: $h-padding;
+  padding-top: 0.5rem;
+  padding-bottom: 0;
+
+  h1 {
+    color: $heading-color;
+    font-variant: small-caps;
+    font-size: 3rem;
+  }
+  h2 {
+    font-weight: bold;
+  }
+}
+
+.expertise-tags span,
+.programming-tags div {
+  display: inline-block;
+  color: $foreground-color;
+  padding: .5rem;
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+  font-size: 1rem;
+  font-weight: bold;
+    // font-family: 'Roboto Mono', monospace;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background-color: $heading-color;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.programming-tags div {
+  padding: 0;
+
+  .lang,
+  .time {
+    font-family: 'Roboto Mono', monospace;
+    float: left;
+    padding: .5rem;
+  }
+
+  .time {
+    color: lighten($foreground-color, 10);
+    background-color: lighten($heading-color, 10);
+    border-radius: 0 5px 5px 0;
+    font-weight: bolder;
+  }
+}
+
+.experience {
+  padding-left: 0;
+  padding-right: 0;
+
+  h1 {
+    padding-left: $h-padding;
+  }
+}
+
+.education,.interests {
+  h2,h3,h4 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+.interests {
+  padding-bottom: $h-padding;
+  @media print {
+    padding-bottom: 0.5rem;
+  }
+}
+.job {
+  padding: $h-padding;
+  padding-top: 0;
+  padding-bottom: 1rem;
+
+  h1 {
+    padding-left: 0;
+    font-size: 2rem;
+    color: black;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem auto;
+  }
+  .time {
+    float: left;
+    font-weight: bold;
+    color: darken($primary-background, 6);
+  }
+  .location {
+    float: right;
+    font-weight: bold;
+    color: darken($primary-background, 6);
+  }
+  .description {
+    margin-top: 0.5rem;
+    max-width: 80%;
+    display: block;
+
+    @include phone {
+      max-width: 100%;
+    }
+  }
+
+  a {
+    font-weight: bold;
+    color: $primary-background;
+  }
+}
