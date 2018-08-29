@@ -10,40 +10,43 @@ $primary-background: #FF005D;
 $foreground-color: #fffdee;
 $heading-color: lighten(#707070, 10);
 $h-padding: 3rem;
+$h-padding-phone: 2rem;
 
 @mixin tablet {
   @media (max-width: #{$tablet-width - 1px}) {
     @content;
   }
 }
-
 @mixin phone {
   @media (max-width: #{$phone-width - 1px}) {
     @content;
   }
 }
+@page {
+  margin: 1cm 0;
+}
+/* All margins set to 2cm */
+@page :first {
+  margin: 0;
+}
 
-@page { margin: 1cm 0; } /* All margins set to 2cm */
-
-  @page :first {
-    margin: 0;
-    margin-bottom: 0;
-
-   }
 html {
   font-size: 12px;
   @include phone {
-    font-size: 14px;
+    font-size: 11px;
+  }
+}
+@media print {
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .wrapper {
+    background-color: unset !important;
   }
 }
 
-@media print {
-  * {  box-shadow:none !important; text-shadow: none !important;  }
-
-.wrapper {
-  background-color: unset !important;
-}
-}
 body {
   font-family: Raleway,serif;
   margin: 0;
@@ -61,13 +64,12 @@ a {
   text-decoration: none;
 
   &:hover {
-    opacity: 0.9;
+    opacity: .9;
   }
-
 }
 
 h1 {
-  margin: 0.5rem auto;
+  margin: .5rem auto;
 }
 
 .download-pdf {
@@ -76,7 +78,6 @@ h1 {
   background-color: $primary-background;
   color: $foreground-color;
   box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
-
   @media print {
     display: none;
   }
@@ -89,6 +90,9 @@ h1 {
   background-color: rgb(250,250,250);
   @include tablet {
     margin: auto;
+  }
+  @include tablet {
+    margin-bottom: 2rem;
   }
 }
 
@@ -113,12 +117,15 @@ h1 {
       font-weight: 500;
       font-size: 4rem;
       margin: 0 auto;
+      @include phone {
+        margin: 2rem auto;
+        font-size: 3.5rem;
+      }
     }
 
     h2 {
-      margin: 1rem auto;
-      margin-top: 0.5rem;
-      font-weight: 600;
+      margin: .5rem auto 1rem;
+      font-weight: 500;
       font-size: 2rem;
     }
 
@@ -134,12 +141,13 @@ h1 {
     img {
       border: 3px solid $foreground-color;
       margin: auto;
+      width: 150px;
+      height: 150px;
+      display: block;
     }
     @include phone {
-      width: 100%;
-      margin: 2rem;
+      margin: 2rem auto 0;
       float: unset;
-      display: inline-block;
     }
   }
 }
@@ -147,6 +155,10 @@ h1 {
 .bio {
   color: $foreground-color;
   padding: 1rem $h-padding;
+  @include phone {
+
+    padding: 1rem $h-padding-phone;
+  }
   width: 100%;
   margin: auto;
   background: darken($primary-background, 6);
@@ -159,13 +171,11 @@ h1 {
   span {
     flex: 1 1 250px;
     max-width: 250px;
-    margin: 0.5rem;
-    margin-left: 0;
+    margin: .5rem .5rem .5rem 0;
     @include phone {
-      flex: 1 1 200px;
-      max-width: 200px;
+      flex: 1 1 250px;
+      max-width: unset;
     }
-
     @media print {
       flex: 1 1 200px;
       max-width: 200px;
@@ -174,17 +184,27 @@ h1 {
 }
 
 .section-heading {
-  padding: $h-padding;
-  padding-top: 0.5rem;
-  padding-bottom: 0;
+  padding: .5rem $h-padding 0;
+
+  @include phone {
+    padding: .5rem $h-padding-phone 0;
+  }
 
   h1 {
     color: $heading-color;
     font-variant: small-caps;
     font-size: 3rem;
+    @include phone {
+  font-size: 2.5rem;
+}
+
   }
+
   h2 {
     font-weight: bold;
+    @include phone {
+  font-size: 1.7rem;
+}
   }
 }
 
@@ -197,13 +217,13 @@ h1 {
   margin-bottom: .5rem;
   font-size: 1rem;
   font-weight: bold;
-    // font-family: 'Roboto Mono', monospace;
+  // font-family: 'Roboto Mono', monospace;
   border-radius: 5px;
   text-transform: uppercase;
   background-color: $heading-color;
 
   &:hover {
-    opacity: 0.9;
+    opacity: .9;
   }
 }
 
@@ -231,50 +251,71 @@ h1 {
 
   h1 {
     padding-left: $h-padding;
+    @include phone {
+
+    padding-left: $h-padding-phone;
+  }
+
   }
 }
 
-.education,.interests {
-  h2,h3,h4 {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+.education,
+.interests {
+  h2,
+  h3,
+  h4 {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
   }
 }
+
 .interests {
   padding-bottom: $h-padding;
+  @include phone {
+  padding-bottom: $h-padding-phone;
+  }
   @media print {
-    padding-bottom: 0.5rem;
+    padding-bottom: .5rem;
   }
 }
+
 .job {
-  padding: $h-padding;
-  padding-top: 0;
-  padding-bottom: 1rem;
+  padding: 0 $h-padding 1rem;
+  @include phone {
+    padding: 0 $h-padding-phone 1rem;
+  }
 
   h1 {
     padding-left: 0;
     font-size: 2rem;
     color: black;
+    @include phone {
+  font-size: 1.7rem;
+}
+
   }
+
   h2 {
     font-size: 1.5rem;
-    margin: 0.5rem auto;
+    margin: .5rem auto;
   }
+
   .time {
     float: left;
     font-weight: bold;
     color: darken($primary-background, 6);
   }
+
   .location {
     float: right;
     font-weight: bold;
     color: darken($primary-background, 6);
   }
+
   .description {
-    margin-top: 0.5rem;
+    margin-top: .5rem;
     max-width: 80%;
     display: block;
-
     @include phone {
       max-width: 100%;
     }
