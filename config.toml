@@ -19,6 +19,6 @@ Copyright = 'Except where otherwise noted, all content is licensed under a <a re
 		instagram = "durand.dsouza"
 		email = "durand1@gmail.com"
 	[params.image]
-	  feature = "/images/header.jpg"
+	  feature = "/images/pembroke.jpg"
 	  credit = '<i class="fa fa-fw fa-map-marker"></i> Pembroke, Wales'
 	  creditlink = "https://500px.com/photo/34333226/the-sea-cliffs-of-pembroke-by-durand-d-souza?ctx_page=1&from=user&user_id=641708"
